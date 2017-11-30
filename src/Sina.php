@@ -58,14 +58,12 @@ class Sina
      */
     public function getAccessTocken()
     {
-        $this->access_token = $this->getCache('access_token');
         $code = isset($_GET['code']) && $_GET['code'] ? _GET['code'] : '';
         if (!$code) return false;
         ini_set('arg_separator.output','&');
         if ($this->access_token) return $this->access_token;
         $token = $this->sina->getAccessToken($code);
         if ($token) {
-            $this->setCache('access_token', $token, 7000);
             $this->access_token = $token;
         }
         return $this->access_token;
@@ -84,29 +82,5 @@ class Sina
         if(isset($user_info['error'])) return false;
         return $user_info;
     }
-
-    /**
-     * 设置缓存，按需重载
-     * @param string $cachename
-     * @param mixed $value
-     * @param int $expired
-     * @return boolean
-     */
-    protected function setCache($cachename,$value,$expired){
-        //TODO: set cache implementation
-        return false;
-    }
-
-    /**
-     * 获取缓存，按需重载
-     * @param string $cachename
-     * @return mixed
-     */
-    protected function getCache($cachename){
-        //TODO: get cache implementation
-        return false;
-    }
-
-
 
 }

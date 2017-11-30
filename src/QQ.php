@@ -65,7 +65,10 @@ class QQ {
             }
             $this->access_token = $aParam["access_token"];
         }
+        return $this->access_token;
     }
+
+    
 
 
 
