@@ -1,6 +1,6 @@
 {
     "name": "mjay807/third_login",
-    "authors" : [{"name": "mjay807", "email": "470563308@qq.com", "homepage": "807mjay.com"}],
+    "authors" : [{"name": "mjay807", "email": "470563308@qq.com", "homepage": "http://807mjay.com"}],
     "type": "library",
     "version": "1.0",
     "description": "third login for all, QQ ,sina, wechat",
