@@ -4,5 +4,5 @@
     "description": "Three party logon for Yii",
     "keywords": ["clone", "copy", "duplicate", "object", "object graph"],
     "homepage": "https://github.com/mjay807/mjay-third_login.git",
-    "license": "MIT",
+    "license": "MIT"
 }
