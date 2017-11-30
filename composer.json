@@ -1,6 +1,6 @@
 {
     "name": "mjay807/third_login",
-    "authors" : "mjay807",
+    "authors" : ["mjay807"],
     "type": "library",
     "version": "1.0",
     "description": "third login for all, QQ ,sina, wechat",
