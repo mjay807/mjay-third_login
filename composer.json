@@ -3,7 +3,7 @@
     "authors" : [{"name": "mjay807", "email": "470563308@qq.com", "homepage": "http://807mjay.com"}],
     "type": "library",
     "version": "1.0",
-    "description": "third login for all, QQ ,sina, wechat",
+    "description": "third login, include QQ、sina and wechat",
     "keywords": ["login", "third", "three", "三方", "微信", "QQ", "Sina", "新浪"],
     "homepage": "https://github.com/mjay807/mjay-third_login.git",
     "time": "2017-11-30 02:42",
