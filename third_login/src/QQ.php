@@ -68,6 +68,10 @@ class QQ {
         return $this->access_token;
     }
 
+    public function getUserInfo()
+    {
+        //todo 获取用户信息
+    }
     
 
 
