@@ -21,9 +21,9 @@
  */
 namespace mjay807\third_login;
 
-use extensions\OAuthException;
-use extensions\SaeTClientV2;
-use extensions\SaeTOAuthV2;
+use mjay807\third_login\extensions\OAuthException;
+use mjay807\third_login\extensions\SaeTClientV2;
+use mjay807\third_login\extensions\SaeTOAuthV2;
 class Sina
 {
     private $app_id;

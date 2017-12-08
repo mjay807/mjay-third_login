@@ -4,16 +4,7 @@
  * 
  * @author Elmer Zhang <freeboy6716@gmail.com>
  */
-namespace extensions;
-use yii\base\Exception;
-
-/**
- * @ignore
- */
-class OAuthException extends Exception {
-	// pass
-}
-
+namespace mjay807\third_login\extensions;
 
 /**
  * 新浪微博 OAuth 认证类(OAuth2)
