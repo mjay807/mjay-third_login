@@ -10,7 +10,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "mjay807\\third_login\\": "third_login/src"
+            "mjay807\\third_login\\": "third_login/src",
+            "mjay807\\third_login\\extensions\\": "third_login/extensions"
         }
     }
 }
