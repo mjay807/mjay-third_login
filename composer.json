@@ -7,5 +7,10 @@
     "keywords": ["login", "third", "three", "三方", "微信", "QQ", "Sina", "新浪"],
     "homepage": "https://github.com/mjay807/mjay-third_login.git",
     "time": "2017-11-30 02:42",
-    "license": "MIT"
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "mjay807\\third_login\\": "third_login/src"
+        }
+    }
 }

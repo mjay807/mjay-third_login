@@ -5,7 +5,7 @@
  * Date: 2017/11/28
  * Time: 上午11:47
  */
-namespace mjay\third_login;
+namespace mjay807\third_login;
 
 class Curl
 {

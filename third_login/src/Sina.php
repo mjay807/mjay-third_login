@@ -19,7 +19,7 @@
  * 新浪开放平台登录
  * @todo 修改名字为auth
  */
-namespace mjay\third_login;
+namespace mjay807\third_login;
 
 use extensions\OAuthException;
 use extensions\SaeTClientV2;
