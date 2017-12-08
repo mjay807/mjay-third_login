@@ -45,9 +45,9 @@ class Sina
      * @return array
      * 获取授权链接
      */
-    public function getAuth()
+    public function getAuth($code = 'code', $state = NULL)
     {
-        $url = $this->sina->getAuthorizeURL($this->callback);
+        $url = $this->sina->getAuthorizeURL($this->callback, $code, $state);
         return $url;
     }
 
