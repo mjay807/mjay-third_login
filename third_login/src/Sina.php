@@ -21,6 +21,7 @@
  */
 namespace mjay807\third_login;
 
+require_once __DIR__ . '/../extensions/saetv2.ex.class.php';
 use mjay807\third_login\extensions\OAuthException;
 use mjay807\third_login\extensions\SaeTClientV2;
 use mjay807\third_login\extensions\SaeTOAuthV2;
@@ -58,11 +59,15 @@ class Sina
      */
     public function getAccessTocken()
     {
-        $code = isset($_GET['code']) && $_GET['code'] ? _GET['code'] : '';
+        $code = isset($_GET['code']) && $_GET['code'] ? $_GET['code'] : '';
         if (!$code) return false;
         ini_set('arg_separator.output','&');
         if ($this->access_token) return $this->access_token;
-        $token = $this->sina->getAccessToken($code);
+        $keys = [];
+        $keys['code'] = $code;
+        $keys['redirect_uri'] = $this->callback;
+
+        $token = $this->sina->getAccessToken('code', $keys);
         if ($token) {
             $this->access_token = $token;
         }
@@ -78,8 +83,9 @@ class Sina
     {
         $this->getAccessTocken();
         $sinaApi = new SaeTClientV2($this->app_id, $this->app_secret, $this->access_token['access_token']);
-        $user_info = $sinaApi->show_user_by_id($this->access_token['openid']);
+        $user_info = $sinaApi->show_user_by_id($this->access_token['uid']);
         if(isset($user_info['error'])) return false;
+        $user_info['open_id'] = $this->access_token;
         return $user_info;
     }
 
