@@ -39,7 +39,7 @@ class WeChat {
      */
     public function authUrl($state = 'STATE')
     {
-        return self::GET_CODE . 'appid=' . $this->app_id . '&redirect=' . urlencode($this->callback) . '&response_type=code&scope=snsapi_login&state=' . $state . '#wechat_redirect';
+        return self::GET_CODE . 'appid=' . $this->app_id . '&redirect_uri=' . urlencode($this->callback) . '&response_type=code&scope=snsapi_login&state=' . $state . '#wechat_redirect';
     }
 
     /**
@@ -50,7 +50,7 @@ class WeChat {
     {
         $code = isset($_GET['code']) && $_GET['code'] ? $_GET['code'] : '';
         if (!$code) header('location', $this->authUrl());
-        $url = self::API_URL_PREFIX . self::GET_ACCESS_TOKEN . 'appid=' . $this->app_id . '&appsecret=' . $this->app_secret . '&code=' . $code . '&grant_type=authorization_code';
+        $url = self::API_URL_PREFIX . self::GET_ACCESS_TOKEN . 'appid=' . $this->app_id . '&secret=' . $this->app_secret . '&code=' . $code . '&grant_type=authorization_code';
         $result = Curl::http_get($url);
         $json = json_decode($result, true);
         if (isset($json['access_token']) && $json['access_token']) $this->access_token = $json['access_token'];
